@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+       
+		   <head>
+           <title>MaxOf3Numbers</title>
+   		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		
+		
+           
+		<style>
+		
+			 body{
+			   
+			  background-color: #590000;
+			 
+			 }
+			 .text-color{
+			 
+			   color:red;
+			 
+			 }
+		 
+		
+		  
+		
+		</style>
+	
+		 <script>
+		 
+		    
+			 
+		 
+		 
+		 
+		      
+		  function calculate(){
+		  
+		          var num1=parseFloat(document.getElementById("num1").value);
+				  if(isNaN(num1)|| (num1<0))
+				   {
+				       document.getElementById("body-inside").innerHTML="<tr><td>"+"first number must be a postive number  and not letter"+"</td></tr>"; <!--inner html contains the all the inners tags-->
+				        return;
+				   }
+				  
+				  
+				  
+				  var num2=parseFloat(document.getElementById("num2").value);
+				  
+				    if(isNaN(num2) || (num2<0))<!--NaN means not a number-->
+				   {
+				       document.getElementById("body-inside").innerHTML="<tr><td>"+"second number  must be a postive number  and not letter"+"</td></tr>"; <!--inner html contains the all the inners tags-->
+				        return;
+				   }
+				  
+				  
+				    
+				   var num3=parseFloat(document.getElementById("num3").value);
+				  
+				  if(isNaN(num3)|| (num3<0))<!--NaN means not a number-->
+				 {
+					 document.getElementById("body-inside").innerHTML="<tr><td>"+" third  number  must be a postive number  and not letter"+"</td></tr>"; <!--inner html contains the all the inners tags-->
+					  return;
+				 }
+				
+				  
+				
+				  
+				  
+				  
+		           if((num1>num2)&&(num1>num3))
+				            {
+                            document.getElementById("body-inside").innerHTML="<tr><td>"+"Max of "+num1+","+num2+"and"+num3+"="+num1+"</td></tr>"; <!--inner html contains the all the inners tags-->
+				             return;
+						 }
+				  else if((num2>num1)&&(num2>num3))
+                       {
+					      document.getElementById("body-inside").innerHTML="<tr><td>"+"Max of "+num1+","+num2+"and"+num3+"="+num2+"</td></tr>"; <!--inner html contains the all the inners tags-->
+				          return;
+					   }
+				  else if((num3>num1)&&(num3>num2))
+				          {
+                       document.getElementById("body-inside").innerHTML="<tr><td>"+"Max of "+num1+","+num2+"and"+num3+"="+num3+"</td></tr>"; <!--inner html contains the all the inners tags-->
+                        return;				    
+ 					}
+				
+				   else
+				   {
+				     document.getElementById("body-inside").innerHTML="<tr><td>"+"all equal" +"</td></tr>"; <!--inner html contains the all the inners tags-->
+				     return;
+				  }
+			
+			
+			  }
+ 	  
+		
+				  
+                  
+				  
+		      
+
+			
+
+
+                   function reset(){
+				    document.getElementById("body-inside").innerHTML="";
+		            document.getElementById("num1").value="";
+				    document.getElementById("num2").value="";
+				    document.getElementById("num3").value="";
+				 }
+			 
+				 
+				
+				 
+				 
+			  
+			  
+			 
+		 
+		 </script>
+	
+	
+	  
+   </head>
+   
+    <body>
+	
+	    <div class="container-fluid /*border border-primary*/ py-4 ">
+		   
+				<div class="/*border border-secondary*/ text-center fs-1">
+				
+				    <p style="color:red;">MaxOf3Numbers</p>
+				
+				</div>
+	      
+		       
+		            <div class="row /*border border-warning*/ justify-content-center align-items-center p-5  bg-light mx-5 my-5 gx-5"><!-- this row is made then only column can be there -->
+							
+							            
+										 
+								
+										<div  class="col-4 /*border border-warning*/ bg-light shadow"><!--in this all contents are there-->
+													 
+													 
+													 <div class="mb-2">
+													 
+													  
+														<label for="num1" class="text-color">first number</label>
+														<input  type="text" id="num1"  placeholder="enter the number" class="form-control"   required></input>
+														
+														
+													 </div>
+													 
+													 
+													 
+													  <div class="mb-2" >
+														 
+														 <label for="num2" class="text-color">second number</label>
+														 <input  type="text" id="num2" class="form-control" placeholder="enter the number" required></input>
+													    
+														
+													  
+													  </div>
+													  
+                                                       
+													  <div class="mb-2" >
+														 
+														<label for="num3" class="text-color">third  number</label>
+														<input  type="text" id="num3" class="form-control" placeholder="enter the number" required></input>
+													   
+													   
+													 
+													 </div>
+
+													  
+													   
+													  
+													 
+													  <div class=" mb-2 text-center">
+													   
+															 <button class="btn btn-primary" onclick="calculate()">calculate</button>
+													         <button class="btn btn-primary" onclick="reset()">clear</button><!--donot use the clear() function  it will not work-->
+													   
+													   </div>
+													   
+													  
+													   
+													   <div class="mb-2 text-center">
+													           
+																	 <table class="table table-striped table-hover /*border border-secondary*/">
+																			  
+																			  <thead>
+																				 <tr>
+																					   <th>Result</th>
+																					 
+																				  </tr>
+																			   </thead>
+																			   
+																			   
+																			   <tbody id="body-inside">
+																			   </tbody>
+																				   
+																	  </table>	   
+																			 
+																		 
+																		 
+														</div>   
+														 
+																 
+															
+														   
+													  
+													  </div>
+											 
+										
+											
+										  
+											</div>
+								
+									 
+							   </div>
+
+							   
+						  </body>
+						  
+						  
+						  
+						  
+			  </html>
+																		 
+																		 
+																	
+																	
+																						   
+																						   
+													   
+													   
+													   
