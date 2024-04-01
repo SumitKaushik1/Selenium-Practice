@@ -10,10 +10,13 @@
       b. password and confirm password should match
       c. minimum length of username should be 3
       d. minimum length of password should be 8 characters
-
+_____________________________________________________________________________________
   - Practice02
       - Write a java application to find information about movies ,using selenium
-        use following link<br>
+        use following link
+        
+        ```sh
         https://www.imdb.com/search/title/?release date=2021&sort=num votes,desc&page=1
-        <br>retrieve the information movie name,rating,year of release and votes,store the information in an array as csv string
+        ```
+        retrieve the information movie name,rating,year of release and votes,store the information in an array as csv string
         Dune,2021,8.3,34567
